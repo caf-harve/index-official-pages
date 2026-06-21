@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>爱游戏 · 站点说明与场景介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafbfc;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      color: #1e2a3a;
+      line-height: 1.7;
+      padding: 0 1.25rem;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.02), 0 6px 20px rgba(0,0,0,0.02);
+    }
+
+    /* 极简顶部导航 */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 1.5rem 0.8rem 1.5rem;
+      border-bottom: 1px solid #eef0f2;
+    }
+
+    .nav-brand {
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 0.02em;
+      color: #1e2a3a;
+    }
+
+    .nav-brand span {
+      color: #537a9a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.6rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #4a5b6b;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: #1e2a3a;
+    }
+
+    /* 核心 hero 区 – 温和介绍 */
+    .hero {
+      padding: 3rem 1.5rem 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 1.9rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+      color: #1b2a3a;
+    }
+
+    .hero p {
+      max-width: 560px;
+      margin: 0 auto 1.2rem auto;
+      color: #3a4a5a;
+      font-size: 1rem;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #eef3f8;
+      color: #2a4a6a;
+      font-size: 0.8rem;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      letter-spacing: 0.02em;
+    }
+
+    /* 叙述段 */
+    .intro-text {
+      padding: 0 1.5rem 2rem 1.5rem;
+    }
+
+    .intro-text p {
+      margin-bottom: 1.1rem;
+      color: #2a3a4a;
+    }
+
+    .intro-text a {
+      color: #2a5f7a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.1s;
+    }
+
+    .intro-text a:hover {
+      border-bottom-color: #2a5f7a;
+    }
+
+    /* 三个场景模块 – 卡片简洁 */
+    .scenes {
+      padding: 0 1.5rem 2.5rem 1.5rem;
+    }
+
+    .scenes h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: #1e2a3a;
+      letter-spacing: -0.01em;
+    }
+
+    .scene-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .scene-card {
+      background: #f8fafc;
+      border-radius: 14px;
+      padding: 1.4rem 1.5rem;
+      border: 1px solid #e9edf0;
+      transition: box-shadow 0.15s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .scene-card h3 {
+      font-weight: 500;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: #1f2e3e;
+    }
+
+    .scene-card p {
+      color: #3a4b5b;
+      font-size: 0.93rem;
+    }
+
+    .scene-card .label {
+      display: inline-block;
+      background: #dee6ed;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.7rem;
+      border-radius: 20px;
+      color: #2a4055;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* 常见说明 (faq 风格) */
+    .faq-summary {
+      padding: 0 1.5rem 2.8rem 1.5rem;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      color: #1e2a3a;
+    }
+
+    .faq-item {
+      margin-bottom: 1.4rem;
+    }
+
+    .faq-item .q {
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      color: #1a2b3e;
+      font-size: 0.98rem;
+    }
+
+    .faq-item .a {
+      color: #425262;
+      font-size: 0.9rem;
+      max-width: 600px;
+    }
+
+    .faq-item .a a {
+      color: #2a5f7a;
+      text-decoration: none;
+      border-bottom: 1px solid #d0d8e0;
+    }
+
+    .faq-item .a a:hover {
+      border-bottom-color: #2a5f7a;
+    }
+
+    /* 页脚 */
+    .footer {
+      border-top: 1px solid #eef0f2;
+      padding: 1.5rem 1.5rem 2.2rem 1.5rem;
+      font-size: 0.8rem;
+      color: #5b6b7b;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #4a6a7a;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      body {
+        padding: 0 0.75rem;
+      }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1.2rem 1rem 0.6rem 1rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .hero {
+        padding: 2rem 1rem 1.8rem 1rem;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .intro-text, .scenes, .faq-summary {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .scene-card {
+        padding: 1rem 1.2rem;
+      }
+      .faq-summary h2, .scenes h2 {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <!-- 导航 -->
+  <nav class="nav">
+    <div class="nav-brand"><span>●</span> 爱游戏 · 索引</div>
+    <div class="nav-links">
+      <a href="#intro">介绍</a>
+      <a href="#scenes">场景</a>
+      <a href="#faq">说明</a>
+    </div>
+  </nav>
+
+  <!-- hero 简述 -->
+  <div class="hero" id="intro">
+    <h1>了解爱游戏 · 站点与定位</h1>
+    <p>一个指向游戏内容索引的轻量页面，帮助使用者快速确认用途与方向。</p>
+    <span class="tagline">温和 · 透明 · 无夸大</span>
+  </div>
+
+  <!-- 可信说明 + 介绍 -->
+  <div class="intro-text">
+    <p>
+      本页面作为 <a href="https://index-official-aiyouxi.com.cn">爱游戏</a> 的概要索引，主要整理站点背景、常见使用场景以及基础可信说明。
+      这里不包含任何下载、充值或诱导行为，仅用于展示站点定位。
+    </p>
+    <p>
+      「爱游戏」本身是一个以信息聚合为导向的页面集合，不直接提供游戏客户端，也不收集个人隐私数据。
+      如果你正在寻找一个轻量、克制的介绍入口，可以通过上方链接直接访问。
+    </p>
+  </div>
+
+  <!-- 三个场景模块 -->
+  <div class="scenes" id="scenes">
+    <h2>常见应用场景</h2>
+    <div class="scene-grid">
+      <div class="scene-card">
+        <span class="label">场景一 · 了解背景</span>
+        <h3>快速确认站点属性</h3>
+        <p>通过简洁的介绍页判断资源是否对路，节省反复搜索的时间。</p>
+      </div>
+      <div class="scene-card">
+        <span class="label">场景二 · 轻量跳转</span>
+        <h3>作为书签或起始页</h3>
+        <p>将链接固定在浏览器收藏夹，每次打开即直达目标索引，无需中间页干扰。</p>
+      </div>
+      <div class="scene-card">
+        <span class="label">场景三 · 分享与说明</span>
+        <h3>向他人温和推荐</h3>
+        <p>使用本页面作为引子，让对方先了解大概，再决定是否深入，避免唐突。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 常见说明 faq 摘要 -->
+  <div class="faq-summary" id="faq">
+    <h2>常见说明</h2>
+    <div class="faq-item">
+      <div class="q">这个页面和爱游戏是什么关系？</div>
+      <div class="a">它是 <a href="https://index-official-aiyouxi.com.cn">爱游戏</a> 的友好介绍页，不替代主站功能。主要帮助新访客理解网站属性。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">需要注册或下载吗？</div>
+      <div class="a">不需要。本页及关联索引页面均不涉及用户注册、付费或软件下载，只提供信息展示。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">内容会频繁变化吗？</div>
+      <div class="a">保持稳定。如果有调整，会通过此介绍页同步更新摘要，避免误导。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">有其他联系方式吗？</div>
+      <div class="a">目前没有公开的即时通讯。一切信息以 <a href="https://index-official-aiyouxi.com.cn">爱游戏</a> 页面展示为准。</div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer">
+    <p>爱游戏 · 索引说明页面 · 仅用于信息展示</p>
+    <p style="margin-top:0.3rem;"><a href="https://index-official-aiyouxi.com.cn">爱游戏</a> — 直接访问主站</p>
+  </div>
+</div>
+</body>
+</html>
