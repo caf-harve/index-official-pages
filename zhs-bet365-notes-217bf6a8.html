@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 bet365：稳定入口与页面导航说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f7fa;
+            color: #1e293b;
+            line-height: 1.75;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: #0f172a;
+            background-image: radial-gradient(ellipse at 30% 40%, #1e293b 0%, #0b1120 90%);
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            color: #e2e8f0;
+            border-bottom: 4px solid #38bdf8;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            color: #f8fafc;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto;
+            color: #94a3b8;
+            font-weight: 300;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            margin-top: 1.4rem;
+            background: #38bdf8;
+            color: #0f172a;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        /* 正文区 */
+        .content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+            background: #ffffff;
+        }
+
+        .content p {
+            margin-bottom: 1.6rem;
+            font-size: 1.05rem;
+        }
+
+        .content p:first-of-type {
+            margin-top: 0;
+        }
+
+        .intro-tag {
+            font-size: 0.9rem;
+            color: #475569;
+            border-left: 3px solid #38bdf8;
+            padding-left: 1rem;
+            margin: 2rem 0 1.8rem;
+            font-style: italic;
+            background: #f1f5f9;
+            padding: 0.8rem 1.2rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .highlight-box h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlight-box li {
+            padding: 0.45rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+
+        .highlight-box li::before {
+            content: "▹";
+            color: #38bdf8;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: #0e7490;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1.5px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #155e75;
+            border-bottom: 1.5px solid #38bdf8;
+        }
+
+        .inline-link {
+            font-weight: 500;
+        }
+
+        .quote-block {
+            border-left: 4px solid #38bdf8;
+            background: #f1f5f9;
+            padding: 1.2rem 1.8rem;
+            margin: 2.2rem 0;
+            border-radius: 0 8px 8px 0;
+            color: #334155;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .quote-block strong {
+            color: #0f172a;
+        }
+
+        .faq-mini {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .faq-mini h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .faq-item .a {
+            margin-left: 1.2rem;
+            color: #475569;
+        }
+
+        .visit-line {
+            margin-top: 2.5rem;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.2rem 1.8rem;
+            text-align: center;
+            border: 1px dashed #cbd5e1;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 2.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .content {
+                padding: 2rem 1.2rem 3rem;
+            }
+            .highlight-box {
+                padding: 1.2rem 1.2rem;
+            }
+            .hero {
+                padding: 3.2rem 1.2rem 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>稳定入口与页面说明</h1>
+        <p class="sub">关于 bet365 平台入口的选择、页面结构及使用前需要了解的核心信息。</p>
+        <span class="badge">导航指南 · 知识向</span>
+    </section>
+
+    <main class="content">
+
+        <p>
+            对于经常使用在线服务的用户来说，入口的稳定性和页面的清晰度直接影响体验。本文以 <a href="https://zhs-bet365.com" class="inline-link">bet365</a> 为例，从页面导航和访问逻辑的角度，梳理一些值得注意的细节。这些信息并非操作指南，而是帮助你在使用前建立对平台入口的基本认识。
+        </p>
+
+        <p>
+            很多用户第一次接触时，会被不同域名或跳转路径迷惑。实际上，一个可靠的入口通常具备几个特征：域名结构简洁、页面加载后无过度重定向、以及明确的语言版本选择。<a href="https://zhs-bet365.com">bet365</a> 的官方中文页面在这些方面做得相对规范，首页即可直接切换语言或区域设置，无需多次跳转。
+        </p>
+
+        <div class="intro-tag">
+            “了解入口的结构，比记住一串链接更重要。因为结构稳定，入口才可靠。”
+        </div>
+
+        <p>
+            从页面布局来看，主站通常将体育赛事、娱乐场、游戏等模块分区呈现，每个模块有独立的子页面。但无论是哪个分区，顶部的导航栏和底部的辅助信息栏都保持一致，这种设计降低了学习成本。你只要熟悉一次首页的结构，就能很快定位到其他功能。
+        </p>
+
+        <div class="highlight-box">
+            <h3>关于页面导航的几点观察</h3>
+            <ul>
+                <li>首页头图区域通常展示当前重点活动或赛事，但不会强制弹窗干扰阅读。</li>
+                <li>所有主要分类均通过一级菜单直达，二级菜单采用悬浮展开，无需多次点击。</li>
+                <li>搜索功能位于页面右上角，支持赛事、队伍、游戏名称等关键词检索。</li>
+                <li>账户相关操作（登录、注册、存款）始终固定在顶部右侧区域，不随滚动隐藏。</li>
+                <li>页面底部集中呈现使用条款、隐私政策及帮助中心，便于查阅正式文件。</li>
+            </ul>
+        </div>
+
+        <p>
+            另一个容易被忽略的方面是页面的加载策略。很多平台为了追踪或广告展示，会嵌入大量第三方资源，导致首屏缓慢。而 <a href="https://zhs-bet365.com">bet365</a> 的中文版页面在静态资源加载上相对克制，首屏内容可以在 2 秒内呈现（基于常规网络测试），这对于信息查阅来说是一个不错的基准。
+        </p>
+
+        <div class="quote-block">
+            <strong>提示：</strong> 如果你发现页面显示异常或加载不全，建议先检查本地网络环境，或者清除浏览器缓存后再尝试。部分地区可能因网络限制导致样式文件延迟，但不影响核心功能的访问。
+        </div>
+
+        <p>
+            对于需要频繁使用的用户，建议将主域名添加至浏览器书签，而不是依赖搜索引擎结果或第三方汇总链接。这样既能避开可能存在的中转页面，也能减少因链接失效而产生的不便。同时，注意区分仿冒或近似域名——官方中文页面仅通过 <code>zhs-bet365.com</code> 及相关官方子域名提供服务。
+        </p>
+
+        <div class="faq-mini">
+            <h4>常见疑问摘要</h4>
+            <div class="faq-item">
+                <div class="q">Q：是否需要注册才能浏览大部分页面？</div>
+                <div class="a">A：不需要。赛事信息、游戏介绍、帮助中心等内容对访客开放；仅在进行投注或个人账户操作时需要登录。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">Q：不同地区的用户看到的页面内容是否一致？</div>
+                <div class="a">A：基础框架一致，但部分活动或功能可能根据当地法规有所调整，以实际页面显示为准。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">Q：页面是否支持移动端自适应？</div>
+                <div class="a">A：支持。移动端布局会重新排列卡片和菜单，但功能模块与桌面端基本保持一致。</div>
+            </div>
+        </div>
+
+        <div class="visit-line">
+            📎 如需直接访问主站，可使用以下地址：<a href="https://zhs-bet365.com">bet365</a>
+        </div>
+
+        <div class="footer-note">
+            本文仅作为页面结构与入口稳定性的知识性说明，不构成任何推荐或诱导。请根据个人需求与当地法规自行判断。
+        </div>
+
+    </main>
+
+</body>
+</html>
